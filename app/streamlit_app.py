@@ -3,6 +3,7 @@ import sys
 import os
 import tempfile
 import uuid
+from urllib.parse import urlencode
 # Add the src directory to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 from src.resume_analyzer import optimize_resume
@@ -81,10 +82,12 @@ def main():
         optimize_button = st.button("Optimize Resume")
     
     with col2:
-        download_pdf_button = st.button("Download Optimized Resume (PDF)")
+        open_in_google_docs_button = st.button("Open Optimized Resume in Google Docs")
+    # with col2:
+    #     download_pdf_button = st.button("Download Optimized Resume (PDF)")
     
-    with col3:
-        download_txt_button = st.button("Download Optimized Resume (TXT)")
+    # with col3:
+    #     download_txt_button = st.button("Download Optimized Resume (TXT)")
 
     # Initialize session state for storing results
     if 'analysis_dict' not in st.session_state:
@@ -113,22 +116,30 @@ def main():
         else:
             st.error("An error occurred during analysis. Please try again.")
 
-    if download_pdf_button and st.session_state.updated_resume:
-        pdf_buffer = create_pdf(st.session_state.updated_resume)
-        st.download_button(
-            label="Download Optimized Resume (PDF)",
-            data=pdf_buffer,
-            file_name="optimized_resume.pdf",
-            mime="application/pdf"
-        )
+    if open_in_google_docs_button and st.session_state.updated_resume:
+        url = "https://docs.google.com/document/d/"
+        params = {
+            "text": st.session_state.updated_resume,
+            "title": "Optimized Resume"
+        }
+        link = url + "?" + urlencode(params)
+        st.markdown(f"[Open Optimized Resume in Google Docs]({link})")
+    # if download_pdf_button and st.session_state.updated_resume:
+    #     pdf_buffer = create_pdf(st.session_state.updated_resume)
+    #     st.download_button(
+    #         label="Download Optimized Resume (PDF)",
+    #         data=pdf_buffer,
+    #         file_name="optimized_resume.pdf",
+    #         mime="application/pdf"
+    #     )
 
-    if download_txt_button and st.session_state.updated_resume:
-        st.download_button(
-            label="Download Optimized Resume (TXT)",
-            data=st.session_state.updated_resume,
-            file_name="optimized_resume.txt",
-            mime="text/plain"
-        )
+    # if download_txt_button and st.session_state.updated_resume:
+    #     st.download_button(
+    #         label="Download Optimized Resume (TXT)",
+    #         data=st.session_state.updated_resume,
+    #         file_name="optimized_resume.txt",
+    #         mime="text/plain"
+    #     )
 
 if __name__ == "__main__":
     main()
