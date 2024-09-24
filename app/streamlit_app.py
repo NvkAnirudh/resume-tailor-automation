@@ -10,14 +10,18 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 's
 from src.resume_analyzer import optimize_resume
 from src.pdf_handler import read_pdf
 from src.google_docs_api_processing import google_docs_auth, create_google_doc
+from credentials_creation import create_credentials
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from io import BytesIO
 
 st.set_page_config(page_title="Resume Optimizer", layout="wide")
 
+# Generate credentials.json dynamically
+create_credentials()
+
 # Create a directory to store uploaded files
-UPLOAD_DIR = os.path.join(os.path.dirname(__file__), '..', 'data', 'sample_resumes')
+UPLOAD_DIR = os.path.join(os.path.dirname(__file__), '..', 'uploads')
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 def create_pdf(text):
