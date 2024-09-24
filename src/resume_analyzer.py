@@ -11,7 +11,7 @@ def optimize_resume(resume_content, job_description):
     3. Revise my resume based on your analysis. Incorporate relevant keywords, highlight key accomplishments with strong action verbs, and ensure the formatting is ATS-friendly.
     4. Offer additional suggestions for optimizing my resume content or layout, if applicable.
     5. Provide a predicted ATS score for the job description and the updated resume.
-    6. Identify any projects in the resume that may not be relevant to this specific job application.
+    6. Identify any projects in the resume that may not be relevant to this specific job application and only keep 3-4 project (max) in the updated resume.
     7. Provide an updated version of the resume. Start the updated resume section with this heading 'Here's an updated version of your resume, optimized for the given job description:'
 
     Please present your analysis and suggestions in a structured Python dictionary format, similar to the following:
