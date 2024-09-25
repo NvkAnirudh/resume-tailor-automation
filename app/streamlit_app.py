@@ -84,8 +84,8 @@ def main():
         with col1:
             optimize_button = st.button("Optimize Resume")
         
-        with col2:
-            open_in_google_docs_button = st.button("Open in Google Docs")
+        # with col2:
+        #     open_in_google_docs_button = st.button("Open in Google Docs")
 
     # Add custom CSS to style the buttons
     st.markdown("""
