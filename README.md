@@ -32,3 +32,32 @@ license: mit
   </p>
 </div>
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#introduction">Introduction</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#problem-statement">Problem Statement</a>
+    </li>
+    <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#source-code">Source Code</a></li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contributions">Contributions</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+## Introduction
+This project automates the tailoring of resumes to a given job description using the Claude 3.5 sonnet model from Anthropic. The goal is to save time and increase efficiency in the job application process.
+
