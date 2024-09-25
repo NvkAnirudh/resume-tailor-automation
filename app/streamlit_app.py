@@ -92,7 +92,7 @@ def main():
     <style>
     div.stButton > button {
         width: 50%;
-        margin: 0 auto;
+        margin: 0;
         display: block
     }
     </style>
