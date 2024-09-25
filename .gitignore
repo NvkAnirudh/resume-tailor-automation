@@ -27,7 +27,7 @@ share/python-wheels/
 MANIFEST
 
 # gcp credentials
-credentials.json
+# credentials.json
 token.json
 
 # PyInstaller

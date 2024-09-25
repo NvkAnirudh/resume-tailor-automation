@@ -79,7 +79,7 @@ def main():
     # Create a container for buttons with custom CSS
     button_container = st.container()
     with button_container:
-        col1, col2, col3 = st.columns([1, 1, 1])
+        col1, col2, col3 = st.columns([1, 2, 1])
         
         with col1:
             optimize_button = st.button("Optimize Resume")
@@ -91,8 +91,9 @@ def main():
     st.markdown("""
     <style>
     div.stButton > button {
-        width: 100%;
-        margin-right: 10px;
+        width: 50%;
+        margin: 0 auto;
+        display: block
     }
     </style>
     """, unsafe_allow_html=True)
