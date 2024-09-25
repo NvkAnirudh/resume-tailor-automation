@@ -113,21 +113,21 @@ def main():
         else:
             st.error("An error occurred during analysis. Please try again.")
 
-    if open_in_google_docs_button and st.session_state.updated_resume:
-        # Authenticate and create Google Docs API service
-        service = google_docs_auth()
+    # if open_in_google_docs_button and st.session_state.updated_resume:
+    #     # Authenticate and create Google Docs API service
+    #     service = google_docs_auth()
 
-        # Create a Google Doc and get its URL
-        doc_url = create_google_doc(service, st.session_state.updated_resume)
+    #     # Create a Google Doc and get its URL
+    #     doc_url = create_google_doc(service, st.session_state.updated_resume)
 
-        st.success('Google Doc created successfully')
-        st.write(f'[Open the Google Doc]({doc_url})')
+    #     st.success('Google Doc created successfully')
+    #     st.write(f'[Open the Google Doc]({doc_url})')
 
-        # Open the document in the browser
-        webbrowser.open(doc_url)
+    #     # Open the document in the browser
+    #     webbrowser.open(doc_url)
 
-        # Display results again to keep them visible
-        display_results()
+    #     # Display results again to keep them visible
+    #     display_results()
 
 def display_results():
     if st.session_state.analysis_dict and st.session_state.updated_resume:
