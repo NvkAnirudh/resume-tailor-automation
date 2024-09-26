@@ -51,7 +51,7 @@ def save_uploaded_file(uploaded_file):
         return None
 
 def main():
-    st.title("Resume Optimizer")
+    st.title("Resume Tailor")
 
     # File upload and manual entry option
     upload_option = st.radio("Choose how to input your resume:", ("Upload PDF", "Enter manually"))
