@@ -30,8 +30,10 @@ license: mit
 
   <p align="center">
     Automation of Resume Tailoring
-    <br />
-    <br />
+<!--     <br />
+    <br /> -->
+    |
+    <a href="https://huggingface.co/spaces/NvkAnirudh/resume-tailor">Resume Optimizer</a>
   </p>
 </div>
 
