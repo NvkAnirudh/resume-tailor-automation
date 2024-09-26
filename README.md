@@ -35,6 +35,8 @@ license: mit
   </p>
 </div>
 
+If you find this project helpful, I'd appreciate it if you could give this repo a star ⭐ Cheers!
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
